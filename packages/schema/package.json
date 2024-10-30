@@ -1,0 +1,23 @@
+{
+  "name": "schema",
+  "version": "0.0.0",
+  "author": "Julius Niedermeier",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "firebase": "^9.23.0",
+    "firebase-admin": "^11.8.0"
+  }
+}

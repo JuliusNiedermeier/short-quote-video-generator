@@ -1,0 +1,26 @@
+{
+  "name": "sigmaai",
+  "version": "0.0.0",
+  "author": "Julius Niedermeier",
+  "private": true,
+  "scripts": {
+    "dev:all": "turbo dev",
+    "dev:client": "turbo dev --filter client --parallel",
+    "dev:functions": "turbo dev --filter cloud-functions",
+    "build:all": "turbo run build --parallel",
+    "build:client": "turbo run build --filter client",
+    "build:functions": "turbo run build --filter cloud-functions",
+    "deploy:all": "turbo deploy",
+    "deploy:client": "turbo deploy --filter client",
+    "deploy:functions": "turbo deploy --filter cloud-functions",
+    "deploy:firestore": "turbo deploy --filter firestore",
+    "deploy:storage": "turbo deploy --filter storage"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "isolate-package": "^1.1.1"
+  }
+}

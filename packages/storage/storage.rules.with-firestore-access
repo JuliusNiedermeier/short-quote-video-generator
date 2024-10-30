@@ -1,0 +1,15 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+    allow read, write: if request.auth != null
+    // function getLastPathItem(pathString) {
+    // 	let items = pathString.split("/");
+    //   return items[items.size() - 1];
+    // }
+    	// Allow write if media doc is present
+    	// allow read, write: if firestore.exists(path("/databases/(default)/documents/uploads/" + getLastPathItem(request.resource.name))) && firestore.get(path("/databases/(default)/documents/uploads/" + getLastPathItem(request.resource.name))).data.owner == request.auth.uid;
+    }
+  }
+}
